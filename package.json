@@ -2,6 +2,9 @@
   "name"           : "rectanglesInRectangles",
   "version"        : "0.1.0",
   "main"           : "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
   "repository"     : "https://github.com/smgcode/rectanglesInRectangles",
   "license"        : "UNLICENSED",
   "devDependencies": {
