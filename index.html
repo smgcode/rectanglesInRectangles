@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Rectangles in Rectangles</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
     <script src="semantic/dist/semantic.min.js"></script>
   </head>
+
   <body>
-    <h1>Hello my World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div class="ui very padded segment">
+
+      <!-- Title -->
+      <h1 class="ui header">Rectangles in Rectangles</h1>
+
+      <!--  -->
+      <form class="ui equal width form">
+        <div class="fields">
+          <div class="field">
+            <label>X - Dimension</label>
+            <div class="ui right labeled input">
+              <input
+                class="js-x-mm"
+                type="number"
+                min="0"
+                step="0.5"
+                placeholder="Enter number">
+              <div class="ui basic label">
+                mm
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Y - Dimension</label>
+            <div class="ui right labeled input">
+              <input
+                class="js-y-mm"
+                type="number"
+                min="0"
+                step="0.5"
+                placeholder="Enter number">
+              <div class="ui basic label">
+                mm
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="ui two statistics">
+        <div class="statistic js-x-in">
+          <div class="value js-x-in-val">0</div>
+          <div class="label">
+            X Dimension (in)
+          </div>
+        </div>
+        <div class="statistic js-y-in">
+          <div class="value js-y-in-val">0</div>
+          <div class="label">
+            Y Dimension (in)
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
   </body>
+
+  <script src="javaScript/app.js"></script>
+
 </html>
