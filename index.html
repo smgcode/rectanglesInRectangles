@@ -9,20 +9,67 @@
     <script src="semantic/dist/semantic.min.js"></script>
   </head>
 
-  <body>
-    <div class="ui very padded segment">
+  <body style="background-color: #E5E5EC">
 
-      <!-- Title -->
-      <h1 class="ui header">Rectangles in Rectangles</h1>
+    <!-- Header -->
+    <div class="ui blue inverted borderless menu">
+      <div class="header item">
 
-      <!--  -->
-      <form class="ui equal width form">
+        <!-- Title -->
+        <h1>
+          <i class="cubes icon"></i>
+          Rectangles in Rectangles
+        </h1>
+
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="ui very padded segment container">
+      <form class="ui equal width form js-form-small">
+
+        <!-- Smaller Rectangles -->
+        <div class="ui horizontal divider">
+          Smaller Rectangles
+        </div>
+
+        <!-- Quantity & Percentage -->
         <div class="fields">
           <div class="field">
-            <label>X - Dimension</label>
+            <label>Quantity</label>
+            <div class="ui input">
+              <input
+                name="integer"
+                class=""
+                type="number"
+                min="0"
+                step="1"
+                placeholder="Enter quantity">
+            </div>
+          </div>
+          <div class="field">
+            <label>Percent Utilized</label>
             <div class="ui right labeled input">
               <input
-                class="js-x-mm"
+                type="number"
+                min="0"
+                max="100"
+                step="1"
+                placeholder="Enter between 0 to 100">
+              <div class="ui basic label">
+                %
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smaller Rectangle Dimensions -->
+        <div class="fields">
+          <div class="field">
+            <div class="ui right labeled input">
+              <div class="ui label">X</div>
+              <input
+                class="js-input-small-x"
                 type="number"
                 min="0"
                 step="0.5"
@@ -33,10 +80,10 @@
             </div>
           </div>
           <div class="field">
-            <label>Y - Dimension</label>
             <div class="ui right labeled input">
+              <div class="ui label">Y</div>
               <input
-                class="js-y-mm"
+                class="js-input-small-y"
                 type="number"
                 min="0"
                 step="0.5"
@@ -47,26 +94,89 @@
             </div>
           </div>
         </div>
+
+        <!-- Smaller Rectangles Output -->
+        <div class="ui two tiny statistics">
+          <div class="statistic js-output-small-x">
+            <div class="value js-value">0</div>
+            <div class="label">
+              Inches
+            </div>
+          </div>
+          <div class="statistic js-output-small-y">
+            <div class="value js-value">0</div>
+            <div class="label">
+              Inches
+            </div>
+          </div>
+        </div>
+
+        <!-- Larger Rectangle -->
+        <div class="ui horizontal divider" style="margin-top: 50px; margin-bottom: 25px;">
+          Larger Rectangle
+        </div>
+
+        <!-- Larger Rectangle Dimensions -->
+        <div class="fields">
+          <div class="field">
+            <div class="ui right labeled input">
+              <div class="ui label">X</div>
+              <input
+                class="js-input-large-x"
+                type="number"
+                min="0"
+                step="0.5"
+                placeholder="Enter number">
+              <div class="ui basic label">
+                in
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui right labeled input">
+              <div class="ui label">Y</div>
+              <input
+                class="js-input-large-y"
+                type="number"
+                min="0"
+                step="0.5"
+                placeholder="Enter number">
+              <div class="ui basic label">
+                in
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Larger Rectangle output -->
+        <div class="ui two tiny statistics">
+          <div class="statistic js-output-large-x">
+            <div class="value js-value">0</div>
+            <div class="label">
+              Millimeters
+            </div>
+          </div>
+          <div class="statistic js-output-large-y">
+            <div class="value js-value">0</div>
+            <div class="label">
+              Millimeters
+            </div>
+          </div>
+        </div>
+
+        <div class="ui two buttons" style="margin-top: 50px;">
+          <button class="ui fluid primary button">
+          Calculate
+          </button>
+          <button class="ui fluid blue basic button">
+          Reset
+          </button>
+        </div>
+
       </form>
 
-      <div class="ui two statistics">
-        <div class="statistic js-x-in">
-          <div class="value js-x-in-val">0</div>
-          <div class="label">
-            X Dimension (in)
-          </div>
-        </div>
-        <div class="statistic js-y-in">
-          <div class="value js-y-in-val">0</div>
-          <div class="label">
-            Y Dimension (in)
-          </div>
-        </div>
-      </div>
-
-
-
     </div>
+
   </body>
 
   <script src="javaScript/app.js"></script>
